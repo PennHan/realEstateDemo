@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import SlideLayout from '../SlideLayout';
+import introBgImage from '/assets/images/intro-bg.png';
 
 interface IntroSlideProps {
   onUnlock: () => void;
@@ -12,7 +13,7 @@ const IntroSlide: React.FC<IntroSlideProps> = ({ onUnlock }) => {
   return (
     <SlideLayout
       className="items-center justify-center text-center"
-      bgImage="/assets/images/intro-bg.png"
+      bgImage={introBgImage}
       dark={true}
     >
       <motion.div
