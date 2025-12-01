@@ -14,7 +14,7 @@ const App: React.FC = () => {
 
   // Define total number of slides (Intro + Data Pages + Summary + Persona)
   // Mapping logic below defines the sequence
-  const TOTAL_SLIDES = 12;
+  const TOTAL_SLIDES = 3;
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartY.current = e.touches[0].clientY;
@@ -66,6 +66,7 @@ const App: React.FC = () => {
             highlightLabel="相伴天数"
           />
         );
+      /* Commented out intermediate slides
       case 2:
         return (
           <DataSlide
@@ -160,7 +161,8 @@ const App: React.FC = () => {
             }
           />
         );
-      case 11:
+      */
+      case 2:
         return <PersonaSlide userData={MOCK_USER_DATA} onRestart={() => setCurrentSlide(0)} />;
       default:
         return null;
